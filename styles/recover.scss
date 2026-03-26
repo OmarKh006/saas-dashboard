@@ -1,5 +1,6 @@
 @use "../components/_variables";
 @use "../components/_reset";
+@use "../components/_global";
 
 .container {
   width: 100%;
@@ -30,12 +31,6 @@
   align-items: center;
   flex-direction: column;
   gap: 5.8rem;
-}
-
-.h1--heading {
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-xl);
-  color: var(--color-text-heading);
 }
 
 .submitEmail {

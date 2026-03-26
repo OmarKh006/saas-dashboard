@@ -1,0 +1,11 @@
+.h1--heading {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-heading);
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: revert;
+  appearance: revert;
+  cursor: pointer;
+}
