@@ -1,0 +1,78 @@
+@use "../components/_variables";
+@use "../components/_reset";
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg-r-c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 65.8rem;
+  height: 65.8rem;
+  padding: 10.4rem 7.8rem 15.7rem;
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5.8rem;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5.8rem;
+}
+
+.h1--heading {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-heading);
+  line-height: 100%;
+}
+
+.eLabel {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-md);
+  line-height: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.emailInput {
+  background-color: var(--color-bg-r-c);
+  width: 100%;
+  height: 5rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: 100%;
+  color: var(--color-text-place-holder);
+  padding-left: 1.5rem;
+  margin-bottom: 2.5rem;
+
+  &::placeholder {
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-base);
+    line-height: 100%;
+    color: var(--color-text-place-holder);
+  }
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 1.4rem 17.3rem 1.4rem 17.2rem;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-md);
+  color: var(--color-bg-white);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  line-height: 100%;
+}

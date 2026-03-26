@@ -1,14 +1,13 @@
+@charset "UTF-8";
 /* ============================================================
    CSS Design Tokens — Base SaaS Dashboard
    Extracted from Figma: SAAS Dashboard (Community)
  */
-
 :root {
   /* ── Brand / Primary ────────────────────────────────────── */
   --color-primary: #605bff;
   --color-primary-light: #ebeefd; /* Active nav item background               */
   --color-primary-hover: #4f4ae6; /* Darkened primary for hover states         */
-
   /* ── Accent Colors ──────────────────────────────────────── */
   --color-blue: #77a8f9; /* Chart line, donut "Sale" segment          */
   --color-yellow: #fed56a; /* Donut "Distribute" segment, stars         */
@@ -16,20 +15,17 @@
   --color-teal: #7fd2de; /* Badge / order-count background            */
   --color-green: #6bbc9d; /* Success states                            */
   --color-pink: #e8a9a5; /* Soft pink — secondary icons               */
-
   /* ── Semantic / Status ──────────────────────────────────── */
   --color-success: #6bbc9d;
   --color-warning: #fed56a;
   --color-danger: #fe8f6b;
   --color-info: #77a8f9;
-
   /* ── Neutral / Text ─────────────────────────────────────── */
   --color-text-heading: #000000; /* black      */
   --color-text-place-holder: #030229;
   --color-text-body: #3a3f5c; /* Slightly lighter navy — body copy         */
   --color-text-muted: #8b8b9b; /* Secondary / placeholder text              */
   --color-text-disabled: #b0b0c0; /* Disabled state text                       */
-
   /* ── Backgrounds ────────────────────────────────────────── */
   --color-bg-r-c: #f7f7f8; /* Overall page / app background  */
   --color-bg-white: #ffffff; /* Card / panel surface                      */
@@ -38,16 +34,13 @@
   --color-bg-tag-yellow: #fff4d6; /* Light yellow tag / icon container         */
   --color-bg-tag-orange: #ffe6de; /* Light orange tag / icon container         */
   --color-bg-tag-teal: #d8f5f8; /* Light teal tag / icon container           */
-
   /* ── Borders & Dividers ─────────────────────────────────── */
   --color-border: #e1e8f7; /* Default card / input border               */
   --color-border-light: #f0f3fc; /* Subtle divider                            */
-
   /* ── Shadows ────────────────────────────────────────────── */
   --shadow-card: 0 0.2rem 1.2rem rgba(98, 93, 253, 0.06);
   --shadow-popup: 0 0.8rem 3.2rem rgba(31, 38, 69, 0.12);
   --shadow-btn: 0 0.4rem 1.2rem rgba(98, 93, 253, 0.3);
-
   /* ── Typography ─────────────────────────────────────────── */
   --font-family: "Nunito", sans-serif;
   --font-size-xs: 1.1rem; /* 11px */
@@ -57,16 +50,13 @@
   --font-size-lg: 2rem; /* 20px */
   --font-size-xl: 2.5rem; /* 25px */
   --font-size-2xl: 3.2rem; /* 32px */
-
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-
   --line-height-tight: 1.2;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
-
   /* ── Spacing ────────────────────────────────────────────── */
   --space-1: 0.4rem; /*  4px */
   --space-2: 0.8rem; /*  8px */
@@ -78,22 +68,225 @@
   --space-10: 4rem; /* 40px */
   --space-12: 4.8rem; /* 48px */
   --space-16: 6.4rem; /* 64px */
-
   /* ── Border Radius ──────────────────────────────────────── */
   --radius-sm: 0.6rem; /*   6px — Tags, badges                  */
   --radius-md: 1rem; /*  10px — Inputs, small cards           */
   --radius-lg: 1.6rem; /*  16px — Cards, panels                 */
   --radius-xl: 2.4rem; /*  24px — Large cards, modal sheets     */
   --radius-full: 9999px; /* Pills, avatars, round buttons         */
-
   /* ── Layout ─────────────────────────────────────────────── */
   --sidebar-width: 22rem; /* 220px */
   --topbar-height: 6.4rem; /*  64px */
   --card-padding: 2.4rem; /*  24px */
   --content-max-width: 128rem; /* 1280px */
-
   /* ── Transitions ────────────────────────────────────────── */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
 }
+
+/***
+    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 62.5%;
+  font-family: var(--font-family);
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu,
+summary {
+  list-style: none;
+}
+
+/* Firefox: solve issue where nested ordered lists continue numbering from parent (https://bugzilla.mozilla.org/show_bug.cgi?id=1881517) */
+ol {
+  counter-reset: revert;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg-r-c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 65.8rem;
+  height: 65.8rem;
+  padding: 10.4rem 7.8rem 15.7rem;
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5.8rem;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5.8rem;
+}
+
+.h1--heading {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-heading);
+  line-height: 100%;
+}
+
+.eLabel {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-md);
+  line-height: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.emailInput {
+  background-color: var(--color-bg-r-c);
+  width: 100%;
+  height: 5rem;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: 100%;
+  color: var(--color-text-place-holder);
+  padding-left: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.emailInput::-moz-placeholder {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: 100%;
+  color: var(--color-text-place-holder);
+}
+.emailInput::placeholder {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: 100%;
+  color: var(--color-text-place-holder);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 1.4rem 17.3rem 1.4rem 17.2rem;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-md);
+  color: var(--color-bg-white);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  line-height: 100%;
+}/*# sourceMappingURL=recover.css.map */
