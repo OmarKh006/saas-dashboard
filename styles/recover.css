@@ -113,6 +113,7 @@ html {
   text-size-adjust: none;
   font-size: 62.5%;
   font-family: var(--font-family);
+  overflow-x: hidden;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -245,13 +246,17 @@ meter {
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-xl);
   color: var(--color-text-heading);
-  line-height: 100%;
+}
+
+.submitEmail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .eLabel {
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-md);
-  line-height: 100%;
   margin-bottom: 0.8rem;
 }
 
@@ -262,7 +267,6 @@ meter {
   border-radius: var(--radius-md);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
-  line-height: 100%;
   color: var(--color-text-place-holder);
   padding-left: 1.5rem;
   margin-bottom: 2.5rem;
@@ -270,23 +274,21 @@ meter {
 .emailInput::-moz-placeholder {
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
-  line-height: 100%;
   color: var(--color-text-place-holder);
 }
 .emailInput::placeholder {
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
-  line-height: 100%;
   color: var(--color-text-place-holder);
 }
 
 .submitBtn {
+  padding: 1.4rem 0;
   width: 100%;
-  padding: 1.4rem 17.3rem 1.4rem 17.2rem;
+  text-align: center;
   background-color: var(--color-primary);
   border-radius: var(--radius-md);
   color: var(--color-bg-white);
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-md);
-  line-height: 100%;
 }/*# sourceMappingURL=recover.css.map */

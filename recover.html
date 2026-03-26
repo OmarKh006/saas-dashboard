@@ -19,7 +19,7 @@
           <img class="logoImg" src="/assets/Logo.svg" alt="logo image" />
           <h1 class="h1--heading">Recover</h1>
         </header>
-        <form action="#" class="submitEmail">
+        <form class="submitEmail" action="#" class="submitEmail">
           <label for="email" class="eLabel">Email Address</label>
           <input
             class="emailInput"
@@ -27,6 +27,8 @@
             id="email"
             name="email"
             placeholder="example@gmail.com"
+            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+            required
           />
           <button class="submitBtn" type="submit">Reset Your Password</button>
         </form>
