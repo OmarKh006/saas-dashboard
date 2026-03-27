@@ -4,6 +4,12 @@
   color: var(--color-text-heading);
 }
 
+.main-h1 {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-22);
+  color: var(--color-text-place-holder);
+}
+
 input[type="checkbox"] {
   -webkit-appearance: revert;
   appearance: revert;

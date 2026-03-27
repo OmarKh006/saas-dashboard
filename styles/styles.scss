@@ -1,2 +1,29 @@
 @use "../components/_variables";
 @use "../components/_reset";
+@use "../components/_global";
+
+.container {
+  padding: 3rem;
+}
+
+.header {
+  width: 8rem;
+  padding: 3.5rem 1.5rem 3.067rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__navigationBar {
+    margin-top: 3.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

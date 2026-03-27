@@ -1,13 +1,5 @@
-/***
-    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
-    GitHub page: https://github.com/elad2412/the-new-css-reset
-***/
+@import "./_mixins";
 
-/*
-    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
-    - The "symbol *" part is to solve Firefox SVG sprite bug
-    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
- */
 *:where(
   :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
 ) {
@@ -28,7 +20,16 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   font-size: 62.5%;
+  overflow-x: hidden;
+
+  @include mobile-tablet {
+    font-size: 8px;
+  }
+}
+
+body {
   font-family: var(--font-family);
+  font-size: 1.6rem;
   overflow-x: hidden;
 }
 

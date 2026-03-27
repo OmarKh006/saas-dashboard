@@ -1,6 +1,7 @@
 @use "../components/_variables";
 @use "../components/_reset";
 @use "../components/_global";
+@import "../components/_mixins";
 
 .container {
   width: 100%;
@@ -41,7 +42,7 @@
   width: 100%;
   align-self: stretch;
 
-  @media (max-width: 900px) {
+  @include mobile-tablet {
     display: none;
   }
 }
