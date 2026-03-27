@@ -1,0 +1,25 @@
+{
+  "name": "10th",
+  "version": "1.0.0",
+  "description": "saas dashboard project",
+  "homepage": "https://github.com/OmarKh006/saas-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/OmarKh006/saas-dashboard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmarKh006/saas-dashboard.git"
+  },
+  "license": "ISC",
+  "author": "Omar Khairy",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "globals": "^17.4.0"
+  }
+}

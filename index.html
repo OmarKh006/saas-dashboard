@@ -21,7 +21,7 @@
             src="/assets/Logo.svg"
             alt="logo image for saas dashboard"
           />
-          <h1 class="main-h1">Base</h1>
+          <h2 class="main-h2">Base</h2>
         </section>
         <nav class="header__navigationBar" aria-label="navigation bar">
           <ul class="navigationList">
@@ -221,6 +221,59 @@
           </div>
         </section>
       </header>
+      <main class="main">
+        <header class="main__head">
+          <h1 class="main-h1">Dashboard</h1>
+          <div class="date-range-wrapper">
+            <div class="date-dropdown" id="startPicker">
+              <div
+                class="date-dropdown__trigger"
+                onclick="togglePicker('startPicker')"
+              >
+                <span class="date-dropdown__label" id="startLabel"
+                  >10-06-2021</span
+                >
+                <svg
+                  class="date-dropdown__arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </div>
+              <div class="date-dropdown__popup" id="startPopup"></div>
+            </div>
+
+            <div class="date-dropdown" id="endPicker">
+              <div
+                class="date-dropdown__trigger"
+                onclick="togglePicker('endPicker')"
+              >
+                <span class="date-dropdown__label" id="endLabel"
+                  >10-10-2021</span
+                >
+                <svg
+                  class="date-dropdown__arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </div>
+              <div class="date-dropdown__popup" id="endPopup"></div>
+            </div>
+          </div>
+        </header>
+      </main>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

@@ -221,7 +221,7 @@ meter {
   color: var(--color-text-heading);
 }
 
-.main-h1 {
+.main-h2 {
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-22);
   color: var(--color-text-place-holder);

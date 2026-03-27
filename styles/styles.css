@@ -221,7 +221,7 @@ meter {
   color: var(--color-text-heading);
 }
 
-.main-h1 {
+.main-h2 {
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-22);
   color: var(--color-text-place-holder);
@@ -235,6 +235,8 @@ input[type=checkbox] {
 }
 
 .container {
+  display: flex;
+  gap: 3rem;
   padding: 3rem;
   min-height: 100vh;
   width: 100%;
@@ -294,4 +296,205 @@ input[type=checkbox] {
   align-items: center;
   flex-direction: column;
   gap: 2.067rem;
+}
+
+.main {
+  width: 100%;
+}
+.main__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-h1 {
+  margin-top: 0.5rem;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-24);
+  color: var(--color-text-place-holder);
+}
+
+.date-range-wrapper {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+/* ── Custom dropdown ── */
+.date-dropdown {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.date-dropdown__trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: #fff;
+  border: 1.5px solid #e4e6ea;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 160px;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.date-dropdown__trigger:hover {
+  border-color: #b0b5c0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.date-dropdown.open .date-dropdown__trigger {
+  border-color: #5b6af0;
+  box-shadow: 0 0 0 3px rgba(91, 106, 240, 0.12);
+}
+
+.date-dropdown__label {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4f6a;
+  letter-spacing: 0.3px;
+}
+
+.date-dropdown__arrow {
+  width: 16px;
+  height: 16px;
+  color: #9499b0;
+  transition: transform 0.2s;
+}
+
+.date-dropdown.open .date-dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+/* ── Calendar popup ── */
+.date-dropdown__popup {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border: 1.5px solid #e4e6ea;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.11);
+  padding: 16px;
+  min-width: 260px;
+  z-index: 100;
+  animation: fadeSlide 0.15s ease;
+}
+
+.date-dropdown.open .date-dropdown__popup {
+  display: block;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Calendar header */
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.cal-header__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3048;
+}
+
+.cal-nav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #7b82a0;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s;
+}
+
+.cal-nav:hover {
+  background: #f0f1f5;
+  color: #2d3048;
+}
+
+/* Day-of-week row */
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  text-align: center;
+}
+
+.cal-dow {
+  font-size: 11px;
+  font-weight: 600;
+  color: #9499b0;
+  padding: 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cal-day {
+  font-size: 13px;
+  font-weight: 500;
+  color: #3d4260;
+  padding: 7px 4px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+
+.cal-day:hover {
+  background: #f0f1f9;
+}
+
+.cal-day.empty {
+  cursor: default;
+}
+
+.cal-day.selected {
+  background: #5b6af0;
+  color: #fff;
+}
+
+.cal-day.today {
+  font-weight: 700;
+  color: #5b6af0;
+}
+
+.cal-day.today.selected {
+  color: #fff;
+}
+
+/* ── Confirm button ── */
+.cal-confirm {
+  margin-top: 12px;
+  width: 100%;
+  padding: 8px;
+  background: #5b6af0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cal-confirm:hover {
+  background: #4754d6;
 }/*# sourceMappingURL=styles.css.map */
