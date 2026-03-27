@@ -28,6 +28,7 @@
   --color-text-disabled: #b0b0c0; /* Disabled state text                       */
   /* ── Backgrounds ────────────────────────────────────────── */
   --color-bg-r-c: #f7f7f8; /* Overall page / app background  */
+  --color-bg-main: #fafafb;
   --color-bg-white: #ffffff; /* Card / panel surface                      */
   --color-bg-input: #f5f6fa; /* Input field background                    */
   --color-bg-tag-blue: #dde9fe; /* Light blue tag / icon container           */

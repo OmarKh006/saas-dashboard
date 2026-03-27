@@ -4,9 +4,14 @@
 
 .container {
   padding: 3rem;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-bg-main);
 }
 
 .header {
+  background-color: var(--color-bg-white);
+  border-radius: var(--radius-md);
   width: 8rem;
   padding: 3.5rem 1.5rem 3.067rem;
   display: flex;
@@ -22,8 +27,41 @@
 
   &__navigationBar {
     margin-top: 3.8rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
   }
+}
+
+.navigationList {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+.itemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.listItem {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.itemText {
+  display: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  color: var(--color-text-place-holder);
+  opacity: 50%;
+}
+
+.profile {
+  margin-top: 31.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.067rem;
 }
