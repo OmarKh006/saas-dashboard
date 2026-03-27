@@ -12,13 +12,21 @@
 }
 
 .signup {
-  padding: 9.15rem 5rem;
+  padding: 0 5rem;
+  padding-top: 9.3rem;
+  padding-bottom: 9rem;
   min-height: 100vh;
+  align-self: stretch;
   background-color: var(--color-bg-white);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.login {
+  padding-top: 20rem;
+  padding-bottom: 21.9rem;
 }
 
 .header {
@@ -31,6 +39,19 @@
 
 .imageSection {
   width: 100%;
+  align-self: stretch;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.inLogin {
+  padding: 25.5rem 0;
+}
+
+.inSignup {
+  padding: 34.1rem 0;
 }
 
 .sImg {
