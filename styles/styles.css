@@ -227,6 +227,13 @@ meter {
   color: var(--color-text-place-holder);
 }
 
+.h4-heading {
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+  color: var(--color-text-heading);
+  opacity: 70%;
+}
+
 input[type=checkbox] {
   -webkit-appearance: revert;
   -moz-appearance: revert;
@@ -311,6 +318,9 @@ input[type=checkbox] {
 
 .main {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 .main__head {
   display: flex;
@@ -342,13 +352,11 @@ input[type=checkbox] {
 .date-dropdown__trigger {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  background: #fff;
-  border: 1.5px solid #e4e6ea;
+  gap: 0.8rem;
+  padding: 1.1rem 1.7rem 1rem;
+  background: var(--color-bg-white);
   border-radius: 0.5rem;
   cursor: pointer;
-  min-width: 130px;
   transition: border-color 0.18s, box-shadow 0.18s;
 }
 
@@ -363,11 +371,10 @@ input[type=checkbox] {
 }
 
 .date-dropdown__label {
-  flex: 1;
-  font-size: 14px;
-  font-weight: 500;
-  color: #4a4f6a;
-  letter-spacing: 0.3px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-place-holder);
+  opacity: 70%;
 }
 
 .date-dropdown__arrow {
@@ -511,7 +518,6 @@ input[type=checkbox] {
 }
 
 .topAnalysis {
-  margin-top: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -538,4 +544,58 @@ input[type=checkbox] {
   font-size: var(--font-size-base);
   color: var(--color-text-heading);
   opacity: 70%;
+}
+
+.reports {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top__products {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  padding: 2.5rem;
+  padding-bottom: 0.2rem;
+  width: 44.7rem;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.product {
+  width: 37.9rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.2rem 0;
+}
+.product:nth-child(2) {
+  border-bottom: 0.1rem solid color-mix(in srgb, var(--color-text-place-holder) 5%, transparent);
+}
+.product__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.name {
+  font-weight: var(--font-weight-regular);
+  font-size: 15px;
+  color: var(--color-text-heading);
+}
+
+.rating {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.price {
+  font-weight: var(--font-weight-bold);
+  font-size: 15px;
+  color: var(--color-text-heading);
 }/*# sourceMappingURL=styles.css.map */

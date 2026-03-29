@@ -227,6 +227,13 @@ meter {
   color: var(--color-text-place-holder);
 }
 
+.h4-heading {
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+  color: var(--color-text-heading);
+  opacity: 70%;
+}
+
 input[type=checkbox] {
   -webkit-appearance: revert;
   -moz-appearance: revert;
