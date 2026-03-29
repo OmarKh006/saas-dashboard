@@ -249,7 +249,7 @@ input[type=checkbox] {
   width: 8rem;
   padding: 3.5rem 1.5rem 3.067rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
@@ -259,6 +259,7 @@ input[type=checkbox] {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  flex: 1;
 }
 .header__navigationBar {
   margin-top: 3.8rem;
@@ -272,10 +273,14 @@ input[type=checkbox] {
 .navigationList {
   display: flex;
   flex-direction: column;
-  gap: 3.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
 
 .itemIcon {
+  padding: 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,7 +302,6 @@ input[type=checkbox] {
 }
 
 .profile {
-  margin-top: 31.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
