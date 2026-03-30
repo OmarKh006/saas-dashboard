@@ -567,7 +567,7 @@ input[type=checkbox] {
   background: var(--color-bg-white);
   border-radius: var(--radius-md);
   padding: 2.5rem;
-  padding-bottom: 0.2rem;
+  padding-bottom: 2.4rem;
   width: 44.7rem;
 }
 
@@ -580,44 +580,37 @@ input[type=checkbox] {
 
 .table {
   width: 100%;
-  table-layout: fixed;
   border-collapse: collapse;
-}
-.table__head tr th:first-child {
-  padding: 1.5rem 2rem;
-  padding-right: 0;
-}
-.table__head tr th:not(:first-child) {
-  padding: 1.5rem 0;
-}
-.table__head tr th:last-child {
-  padding-right: 0;
-  text-align: right;
-}
-.table__head tr th p {
-  display: inline;
-  vertical-align: middle;
-}
-.table__head tr th .dropdownIcon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 1rem;
-}
-.table__body tr td {
-  padding-left: 2rem;
-}
-.table__head tr th:last-child {
-  padding-right: 0;
-  text-align: right;
-}
-.table__body tr td:last-child {
-  text-align: right;
 }
 
 .headerText {
+  display: inline-block;
   font-weight: var(--font-weight-regular);
   font-size: 12px;
   color: var(--color-text-place-holder);
+}
+.headerText:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.tableTxt {
+  font-weight: var(--font-weight-regular);
+  font-size: 12px;
+  color: var(--color-text-place-holder);
+  text-align: center;
+}
+
+.cellOrder {
+  width: 6.1rem;
+  height: 3rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(38, 192, 226, 0.1);
+  font-weight: var(--font-weight-bold);
+  font-size: 12px;
+  color: #26c0e2;
 }
 
 .head {
