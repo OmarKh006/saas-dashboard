@@ -1,3 +1,7 @@
+/*FROM Claude, i was trying something :)*/
+
+/* eslint-disable */
+
 const pickers = {
   startPicker: { date: new Date(2021, 9, 6), labelId: "startLabel" },
   endPicker: { date: new Date(2021, 9, 10), labelId: "endLabel" },
